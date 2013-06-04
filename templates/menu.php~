@@ -1,0 +1,24 @@
+<menu>
+<table class="menu">
+	<tr>
+		<td>
+			<a href="../html" class="menu-button">Home</a>
+		</td>
+		<td>
+			Technology
+		</td>
+		<td>
+			Wheather
+		</td>
+		<td>
+			Politics
+		</td>
+		<td>
+			History
+		</td>
+		<td>
+			View Point
+		</td>
+	</tr>
+</table>
+</menu>

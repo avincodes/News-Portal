@@ -1,22 +1,24 @@
-<table border width=1>
+<menu>
+<table class="menu">
 	<tr>
 		<td>
-			<a href="index.php">Home</a>
+			<a href="../html" class="menu-button">Home</a>
 		</td>
 		<td>
-			Technology
+			<a href="#" class="menu-button">Technology</a>
 		</td>
 		<td>
-			Wheather
+			<a href="#" class="menu-button">Wheather</a>
 		</td>
 		<td>
-			Politics
+			<a href="#" class="menu-button">Politics</a>
 		</td>
 		<td>
-			History
+			<a href="#" class="menu-button">History</a>
 		</td>
 		<td>
-			View Point
+			<a href="#" class="menu-button">View Point</a>
 		</td>
 	</tr>
 </table>
+</menu>
