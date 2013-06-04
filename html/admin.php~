@@ -1,0 +1,5 @@
+<?php
+	print 'this is authorized page';
+?
+>
+<a href="logout.php">Logout</a>

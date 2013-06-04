@@ -12,7 +12,7 @@
     define("PASSWORD", "123456");
 
     // your database's server
-    define("SERVER", "");
+    define("SERVER", "%");
 
     // your database's username
     define("USERNAME", "niyasc");

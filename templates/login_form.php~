@@ -21,7 +21,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td style="text-align:center">
 			<input type="submit" value="Login" >
 		</td>
 	</tr>

@@ -3,8 +3,6 @@
     /***********************************************************************
      * functions.php
      *
-     * Computer Science 50
-     * Problem Set 7
      *
      * Helper functions.
      **********************************************************************/
@@ -153,10 +151,13 @@
         {
             // extract variables into local scope
             extract($values);
-
+	    
             // render header
             require("../templates/header.php");
-
+	    if(empty($_SESSION["id"])&&$template!="login_form.php")
+	    {
+	    	require("../templates/menu.php");
+	    }
             // render template
             require("../templates/$template");
 
@@ -177,7 +178,7 @@
     	    // require authentication for most pages
     	if (!preg_match("{(?:login|logout|register)\.php$}", $_SERVER["PHP_SELF"]))
     	{
-        	if (empty($_SESSION["id"]))
+        	if (empty($_SESSION["uname"]))
         	{
         	    redirect("login.php");
         	}

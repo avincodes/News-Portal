@@ -7,7 +7,7 @@
 	</tr>
 	<tr>
 		<td>
-			<input type="text" name="uname" required>
+			<input type="text" name="username" required>
 		</td>
 	</tr>
 	<tr>
@@ -17,7 +17,7 @@
 	</tr>
 	<tr>
 		<td>
-			<input type="password" name="paswd" required>
+			<input type="password" name="password" required>
 		</td>
 	</tr>
 	<tr>

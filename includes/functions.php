@@ -3,8 +3,6 @@
     /***********************************************************************
      * functions.php
      *
-     * Computer Science 50
-     * Problem Set 7
      *
      * Helper functions.
      **********************************************************************/
@@ -173,18 +171,5 @@
             trigger_error("Invalid template: $template", E_USER_ERROR);
         }
     }
-    
-    //If user is not logged on redirect to login page
-    function authenticate()
-    {
-    	    // require authentication for most pages
-    	if (!preg_match("{(?:login|logout|register)\.php$}", $_SERVER["PHP_SELF"]))
-    	{
-        	if (empty($_SESSION["id"]))
-        	{
-        	    redirect("login.php");
-        	}
-   	}
-   }	
 
 ?>

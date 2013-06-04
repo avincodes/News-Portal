@@ -1,8 +1,8 @@
 <header>
         <?php if (isset($title)): ?>
-            <title>My Blog : <?= htmlspecialchars($title) ?></title>
+            <title>Liberation-through the burning minds of youth : <?= htmlspecialchars($title) ?></title>
         <?php else: ?>
-            <title>My Blog</title>
+            <title>Liberation-through the burning minds of youth</title>
         <?php endif ?>
         <link href="css/style.css" rel="stylesheet"/>
 </header>
@@ -16,7 +16,7 @@
 	</tr>
 		<tr>
 		<td class="promo">
-			This is the place to write promo of portal
+			Through the burning minds of youth
 		</td>
 	</tr>
 </table>
