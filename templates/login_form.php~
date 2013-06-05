@@ -1,5 +1,5 @@
 <form action="login.php" method="post">
-<table class="login">
+<table class="center">
 	<tr>
 		<td>
 			Username
