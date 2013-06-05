@@ -9,5 +9,5 @@
 			redirect("login.php");
 		}
     	}
-	render("main.php",["title"=>"Control Panel"]);
+	render("edit.php",["title"=>"Control Panel"]);
 ?>

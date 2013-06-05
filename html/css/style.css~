@@ -2,6 +2,7 @@ table.center
 {
 	margin-left:auto;
 	margin-right:auto;
+	vertical-align:center;
 }
 .menu
 {
@@ -61,5 +62,5 @@ table.center
 {
 	text-align:center;
 	font-size:20px;
-	color:yellow;
+	color:brown;
 }

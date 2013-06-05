@@ -4,21 +4,17 @@
 		<td>
 			<a href="../html" class="menu-button">Home</a>
 		</td>
+		<?php
+			$categories=query("select name from categories");
+			foreach($categories as $category)
+			{
+		?>
 		<td>
-			Technology
+				<?=$category["name"]?>
 		</td>
-		<td>
-			Wheather
-		</td>
-		<td>
-			Politics
-		</td>
-		<td>
-			History
-		</td>
-		<td>
-			View Point
-		</td>
+		<?php
+			}
+		?>
 	</tr>
 </table>
 </menu>
