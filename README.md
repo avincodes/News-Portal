@@ -1,4 +1,4 @@
-blog-template-php
-=================
-
-This is a simple blog template containing menu,header,posts and admin page.
+News Portal
+===========
+This is an attempt to build a model news template in which even a guy without programming background
+can make postings.
