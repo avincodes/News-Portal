@@ -1,6 +1,6 @@
 <table class="news-table">
 <?php
-	$latest=query("select id,title,content from news order by timestamp desc limit 5;");
+	$latest=$values["latest"];
 ?>
 	<tr>
 		<td>
@@ -22,7 +22,7 @@
 							}
 						?>
 							<tr>
-								<td style="height:300px;text-align:center">
+								<td style="height:300px;text-align:center;background-color:gray;">
 									<?php
 										$dim=getimagesize("images/".$image);
 										//print_r($dim);
@@ -39,7 +39,7 @@
 											$height=300;
 											$width=300*$ar;
 										}
-										print "<img src=images/".$image." height=".$height." width=".$width." />";
+										print "<img src='images/".$image."' height=".$height." width=".$width." />";
 									?>
 								</td>
 							</tr>
@@ -48,7 +48,9 @@
 									<table class="first-news">
 										<tr>
 											<td class="title">
+												<a href="<?='individual-news.php?id='.$current['id']?>">
 												<?=$current["title"]?>
+												</a>
 											</td>
 										</tr>
 										<tr>
@@ -73,12 +75,14 @@
 									<table class="latest-news">
 										<tr>
 											<td class="title">
+												<a href="<?='individual-news.php?id='.$current['id']?>">
 												<?=$current["title"]?>	
+												</a>
 											</td>
 										</tr>
 										<tr>
 											<td class="content">
-												<?=substr($current["content"],0,256)?>...
+												<?=substr($current["content"],0,340)?>...
 											</td>
 										</tr>
 									</table>
@@ -94,40 +98,97 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td class="preview-box">
 			Preview;
 		</td>
 	</tr>
+	<tr>
+		<td>
 	<?php
-		$categories=query("select * from categories");
+		$categories=$values["categories"];
 		$n=count($categories);
-		$k=0;
-		while($k<$n)
+		$i=0;
+		while($i<$n)
 		{
-			if($n-$k-1>=1)
+			if($i%2==0)
 			{
-				print "<tr>";
-					$item=$categories[$k];
-					print"<td>";
-						print $item["name"];
-					print"</td>";
-					$item=$categories[$k+1];
-					print"<td>";
-						print $item["name"];
-					print"</td>";
-				print "</tr>";
+				print "<table>";
+					print "<tr>";
+						print "<td style='vertical-align:center'>";
+							print "<table class=category-box>";
+								print "<tr>";
+									print "<td class=title>";
+										print $categories[$i]['name'];
+									print "</td>";
+								print "</tr>";
+								$titles=query("select id,title from news where category=? order by timestamp desc limit 5",$categories[$i]['id']);
+								if(count($titles)==0)
+								{
+									print "<tr>";
+										print "<td>";
+											print "No content found in this section";
+										print "</td>";
+									print "</tr>";
+								}
+								foreach($titles as $title)
+								{
+									print "<tr>";
+										print "<td class=content>";
+											print "<li>";
+												print "<a href='individual-news.php?id=".$title["id"]."' >";
+													print $title['title'];
+												print "</a>";
+											print "</li>";
+										print "</td>";
+									print "</tr>";
+								}
+							print "</table>";
+								
+						print "</td>";
 			}
 			else
 			{
-				print "<tr>";
-					$item=$categories[$k];
-					print"<td>";
-						print $item["name"];
-					print"</td>";
-				print "</tr>";
+						print "<td style='vertical-align:top'>";
+							print "<table class=category-box>";
+								print "<tr>";
+									print "<td class=title>";
+										print $categories[$i]['name'];
+									print "</td>";
+								print "</tr>";
+								$titles=query("select id,title from news where category=? order by timestamp desc limit 5",$categories[$i]['id']);
+								if(count($titles)==0)
+								{
+									print "<tr>";
+										print "<td>";
+											print "No content found in this section";
+										print "</td>";
+									print "</tr>";
+								}
+								foreach($titles as $title)
+								{
+									print "<tr>";
+										print "<td class=content style='vertical-align:center'>";
+											print "<li>";
+												print "<a href='individual-news.php?id=".$title["id"]."' >";
+													print $title['title'];
+												print "</a>";
+											print "</li>";
+										print "</td>";
+									print "</tr>";
+								}
+							print "</table>";
+						print "</td>";
+					print "</tr>";
+				print "</table>";
 			}
-			$k=$k+2;
+			$i=$i+1;
 		}
-	?>	
-				
+		if($i%2==1)
+		{
+					print "</tr>";
+				print "</table>";
+		}
+	?>
+		</td>
+	</tr>
 </table>

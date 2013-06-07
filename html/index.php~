@@ -4,6 +4,7 @@
     require("../includes/config.php"); 
 
     // render portfolio
-    render("main.php", ["title" => "Home Page"]);
+    $latest=query("select id,title,content from news order by timestamp desc limit 5;");
+    render("home.php", ["title" => "Home Page","latest"=>$latest]);
 
 ?>

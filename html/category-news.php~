@@ -1,0 +1,26 @@
+<?php
+
+    // configuration
+    require("../includes/config.php"); 
+    // if form was submitted
+    if ($_SERVER["REQUEST_METHOD"] == "GET")
+    {
+        if(empty($_GET["category"]))
+        {
+        	//print "empty category";
+        	redirect('./');
+        }
+        else
+        {
+      		$head=query("select name from categories where id=?",$_GET["category"]);
+        	$head=$head[0]["name"];
+        	//print 'going to render';
+        	render("list-category-news.php",["title"=>$head,"category"=>$_GET["category"]]);
+        }
+    }
+    else
+    {
+        redirect('./');
+    }
+
+?>

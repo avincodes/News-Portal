@@ -1,16 +1,20 @@
 <menu>
 <table class="menu">
 	<tr>
-		<td>
+		<td >
 			<a href="../html" class="menu-button">Home</a>
 		</td>
 		<?php
-			$categories=query("select name from categories");
+			$categories=query("select id,name from categories");
 			foreach($categories as $category)
 			{
 		?>
 		<td>
-			<a href="" class="menu-button">	<?=$category["name"]?> </a>
+		<?php
+			print "<a href='category-news.php?category=".$category["id"]."'  class='menu-button'>";
+		?>
+			<?=$category["name"]?> 
+			</a>
 		</td>
 		<?php
 			}

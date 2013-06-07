@@ -1,9 +1,7 @@
-<div class="footer-bg">
-	<table class="center">
-		<tr>
-			<td class="center">
-				copyleft@liberationmovement
-			</td>
-		</tr>
-	</table>
-</div>
+<table >
+	<tr>
+		<td>
+			copyleft@liberationmovement
+		</td>
+	</tr>
+</table>

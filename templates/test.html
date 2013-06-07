@@ -1,0 +1,126 @@
+<script type="text/javascript" src="../html/javascript/jquery.min.js"></script>
+
+<script type="text/javascript" src="../html/javascript/s3Slider.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+   $('#Liveurlifehere-slider').s3Slider({
+      timeOut: 3000
+   });
+});
+</script>
+
+<style>
+
+#Liveurlifehere-slider {
+   width: 590px; /* Keep it 20px-40PX greater than ACTUAL Image size */
+   height: 335px;
+   position: relative;
+   overflow: hidden;
+   margin-left: 0;
+}
+
+#Liveurlifehere-sliderContent {
+   width: 590px;
+   position: absolute;
+   top: 0;
+   margin-left: 0;
+}
+
+.Liveurlifehere-sliderImage {
+   float: left;
+   position: relative;
+   display: none;  top: 0;
+   border:1px solid #ddd;
+
+}
+
+.Liveurlifehere-sliderImage span {
+position: absolute;
+    font: 10px/15px sans-serif,Arial, Helvetica;
+    padding: 10px 10px;
+    background-color: #000;
+    color: #fff;
+    filter:'alpha(opacity=70)';
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    text-align:justify;
+}
+
+.Liveurlifehere-sliderImage span a {
+
+text-decoration:underline;
+color:#FE6602;
+}
+
+.clear {
+   clear: both;
+}
+
+.top {
+    top: 0;
+    left: 0;
+    width: 570px !important;
+    height: 70px;
+}
+.bottom {
+    bottom: 0;
+    left: 0;
+    width: 570px !important;
+    height:90px;
+}
+.left {
+    left: 0;
+    top: 0;
+    width: 110px !important;
+    height: 335px;
+}
+.right {
+    right: 0;
+    bottom: 0;
+    width: 80px !important;
+    height: 319px;
+}
+
+</style>
+
+<div id="Liveurlifehere-slider">
+<ul id="Liveurlifehere-sliderContent">
+
+<li class="Liveurlifehere-sliderImage">
+<img src="../html/images/default.png" />
+<span class="right"><h3>HEADING-1 GOES HERE</h3>DESCRIPTION GOES HERE</span>
+</li>
+
+<li class="Liveurlifehere-sliderImage">
+<img src="../html/images/default.png" />
+<span class="left"><h3>HEADING-2 GOES HERE</h3>DESCRIPTION GOES HERE</span>
+</li>
+
+
+<li class="Liveurlifehere-sliderImage">
+<img src="../html/images/default.png" />
+<span class="top"><h3>HEADING-3 GOES HERE</h3>DESCRIPTION GOES HERE</span>
+
+</li>
+<li class="Liveurlifehere-sliderImage">
+<img src="../html/images/default.png" />
+<span class="bottom"><h3>HEADING-4 GOES HERE</h3>DESCRIPTION GOES HERE</span>
+</li>
+
+
+<li class="Liveurlifehere-sliderImage">
+<img src="../html/images/default.png" />
+<span class="bottom"><h3>HEADING-5 GOES HERE</h3>DESCRIPTION GOES HERE</span>
+
+</li>
+<li>
+For more visit:-
+<href="http://www.liveurlifehereblog.blogspot.com">
+</li>
+<div class="clear Liveurlifehere-sliderImage"></div>
+</ul>
+</div>
+
+<br/> 
+
