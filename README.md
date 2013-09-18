@@ -1,4 +1,3 @@
 News Portal
 ===========
-This is an attempt to build a model news template in which even a guy without programming background
-can make postings.
+A simple news portal that displays home page of a news paper,category wise news and detailed news with images..
